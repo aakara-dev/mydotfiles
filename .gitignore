@@ -2,7 +2,7 @@
 Brewfile.local
 
 # Secrets — never commit these
-zsh/exports.zsh
+zsh/.config/zsh/exports.zsh
 .env
 .env.*
 !.env.example

@@ -30,19 +30,19 @@ source "$ZSH/oh-my-zsh.sh" 2>/dev/null || true
 # ── Load modules ──────────────────────────────────────────────────────────────
 _load() { [[ -f "$1" ]] && source "$1"; }
 
-_load "$DOTFILES/zsh/exports.zsh"          # Secrets & env vars (gitignored)
-_load "$DOTFILES/zsh/path.zsh"             # PATH construction
-_load "$DOTFILES/zsh/aliases.zsh"          # Aliases
-_load "$DOTFILES/zsh/functions.zsh"        # Shell functions
+_load "$HOME/.config/zsh/exports.zsh"          # Secrets & env vars (gitignored)
+_load "$HOME/.config/zsh/path.zsh"             # PATH construction
+_load "$HOME/.config/zsh/aliases.zsh"          # Aliases
+_load "$HOME/.config/zsh/functions.zsh"        # Shell functions
 
-_load "$DOTFILES/zsh/modules/git.zsh"
-_load "$DOTFILES/zsh/modules/python.zsh"
-_load "$DOTFILES/zsh/modules/azure.zsh"
-_load "$DOTFILES/zsh/modules/databricks.zsh"
-_load "$DOTFILES/zsh/modules/kubernetes.zsh"
-_load "$DOTFILES/zsh/modules/terraform.zsh"
-_load "$DOTFILES/zsh/modules/docker.zsh"
-_load "$DOTFILES/zsh/modules/digitalocean.zsh"
+_load "$HOME/.config/zsh/modules/git.zsh"
+_load "$HOME/.config/zsh/modules/python.zsh"
+_load "$HOME/.config/zsh/modules/azure.zsh"
+_load "$HOME/.config/zsh/modules/databricks.zsh"
+_load "$HOME/.config/zsh/modules/kubernetes.zsh"
+_load "$HOME/.config/zsh/modules/terraform.zsh"
+_load "$HOME/.config/zsh/modules/docker.zsh"
+_load "$HOME/.config/zsh/modules/digitalocean.zsh"
 
 # ── Completions ───────────────────────────────────────────────────────────────
 autoload -Uz compinit && compinit

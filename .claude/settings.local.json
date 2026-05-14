@@ -18,7 +18,8 @@
       "Bash(bash -n scripts/uninstall.sh)",
       "Bash(brew bundle *)",
       "Bash(bash -n /Users/aakara/.mydotfiles/scripts/macos.sh)",
-      "Bash(bash -n /Users/aakara/.mydotfiles/scripts/link.sh)"
+      "Bash(bash -n /Users/aakara/.mydotfiles/scripts/link.sh)",
+      "Bash(git *)"
     ]
   }
 }

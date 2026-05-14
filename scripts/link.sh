@@ -25,9 +25,9 @@ stow --dir="$DOTFILES_DIR" --target="$HOME" --ignore='.DS_Store' "${STOW_FLAGS[@
 echo "Stow complete: ${PACKAGES[*]}"
 
 # ── exports.zsh — copy example if no live file yet ───────────────────────────
-if [[ ! -f "$DOTFILES_DIR/zsh/exports.zsh" ]]; then
-  cp "$DOTFILES_DIR/zsh/exports.zsh.example" "$DOTFILES_DIR/zsh/exports.zsh"
-  echo "Created zsh/exports.zsh from example — fill in your secrets."
+if [[ ! -f "$DOTFILES_DIR/zsh/.config/zsh/exports.zsh" ]]; then
+  cp "$DOTFILES_DIR/zsh/.config/zsh/exports.zsh.example" "$DOTFILES_DIR/zsh/.config/zsh/exports.zsh"
+  echo "Created zsh/.config/zsh/exports.zsh from example — fill in your secrets."
 fi
 
 # ── ~/.zshrc.local — seed from example if not present ────────────────────────
