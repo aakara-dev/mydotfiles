@@ -1,0 +1,52 @@
+# SSH config template — copy to ~/.ssh/config
+# ~/.ssh/config is NOT committed to git (it may contain hostnames/IPs).
+# This file IS committed as a reference template.
+
+# ── Global defaults ───────────────────────────────────────────────────────────
+Host *
+    AddKeysToAgent          yes
+    IdentityFile            ~/.ssh/id_ed25519
+    ServerAliveInterval     60
+    ServerAliveCountMax     3
+    StrictHostKeyChecking   accept-new
+    Compression             yes
+    ControlMaster           auto
+    ControlPath             ~/.ssh/ctrl-%C
+    ControlPersist          10m
+
+# ── GitHub ────────────────────────────────────────────────────────────────────
+Host github.com
+    Hostname                github.com
+    User                    git
+    IdentityFile            ~/.ssh/id_ed25519_github
+
+# ── GitLab ───────────────────────────────────────────────────────────────────
+Host gitlab.com
+    Hostname                gitlab.com
+    User                    git
+    IdentityFile            ~/.ssh/id_ed25519_gitlab
+
+# ── Azure VM jump host ────────────────────────────────────────────────────────
+Host azure-bastion
+    Hostname                <bastion-public-ip>
+    User                    azureuser
+    IdentityFile            ~/.ssh/id_ed25519_azure
+
+Host azure-dev
+    Hostname                10.0.0.x
+    User                    azureuser
+    ProxyJump               azure-bastion
+    IdentityFile            ~/.ssh/id_ed25519_azure
+
+# ── DigitalOcean droplet ──────────────────────────────────────────────────────
+Host do-prod
+    Hostname                <droplet-ip>
+    User                    root
+    IdentityFile            ~/.ssh/id_ed25519_do
+
+# ── Example: dev server via SSH tunnel ───────────────────────────────────────
+# Host dev-tunnel
+#     Hostname               dev.internal
+#     User                   ubuntu
+#     LocalForward           5432 localhost:5432   # Forward Postgres
+#     LocalForward           8080 localhost:8080   # Forward app port

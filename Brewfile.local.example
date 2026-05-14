@@ -1,0 +1,19 @@
+# Machine-specific packages — copy to Brewfile.local (git-ignored).
+# Run: brew bundle --file=~/.mydotfiles/Brewfile.local
+#
+# ── Container runtime (pick ONE) ─────────────────────────────────────────────
+cask "docker-desktop"
+# cask "rancher"
+
+# ── Work machine: skip anything Jamf already manages ─────────────────────────
+# On a Jamf-managed machine, comment out apps your IT team deploys centrally.
+# brew bundle will skip a cask that is already installed, but if Jamf blocks
+# the install outright, the line below lets you silence it cleanly:
+#
+# Example work Brewfile.local — uncomment what applies:
+# (remove whatsapp/telegram from main Brewfile install by overriding here)
+# cask "microsoft-edge"        # if IT manages Chrome / browser choice
+# cask "zoom"                  # if Jamf deploys Zoom
+# cask "slack"                 # if Jamf deploys Slack
+
+# ── Add any other machine-specific casks/formulae below ──────────────────────

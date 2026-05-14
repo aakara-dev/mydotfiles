@@ -1,0 +1,20 @@
+# ~/.zshrc.local — machine-specific config, never committed.
+# Sourced last by ~/.zshrc so it can override anything above.
+
+# ── Azure default subscription ────────────────────────────────────────────────
+# export AZURE_SUBSCRIPTION_ID="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+# az account set --subscription "$AZURE_SUBSCRIPTION_ID" 2>/dev/null
+
+# ── Kubectl default context / namespace ───────────────────────────────────────
+# export KUBECONFIG="$HOME/.kube/config"
+# kubectl config use-context my-cluster 2>/dev/null
+# kubectl config set-context --current --namespace=my-namespace 2>/dev/null
+
+# ── Directory shortcuts ───────────────────────────────────────────────────────
+# alias proj='cd ~/Work/my-project'
+# alias infra='cd ~/Work/infra'
+# alias client='cd ~/Clients/acme'
+
+# ── Machine-specific env vars ─────────────────────────────────────────────────
+# export WORK_EMAIL="you@company.com"
+# export GITHUB_TOKEN="ghp_..."

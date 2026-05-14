@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(chmod +x *)",
+      "Bash(zsh -n /Users/aakara/.mydotfiles/zsh/.zshrc)",
+      "Bash(zsh -n /Users/aakara/.mydotfiles/zsh/aliases.zsh)",
+      "Bash(zsh -n /Users/aakara/.mydotfiles/zsh/functions.zsh)",
+      "Bash(zsh -n /Users/aakara/.mydotfiles/zsh/path.zsh)",
+      "Bash(chmod 600 ~/.ssh/config)",
+      "Bash(pbcopy)",
+      "Bash(ssh -V)",
+      "Bash(git -C /Users/aakara/.mydotfiles add ssh/config.example)",
+      "Bash(git -C /Users/aakara/.mydotfiles commit -m ' *)",
+      "Bash(bash -n install.sh)",
+      "Bash(bash -n scripts/bootstrap.sh)",
+      "Bash(bash -n scripts/link.sh)",
+      "Bash(bash -n scripts/macos.sh)",
+      "Bash(bash -n scripts/uninstall.sh)",
+      "Bash(brew bundle *)",
+      "Bash(bash -n /Users/aakara/.mydotfiles/scripts/macos.sh)",
+      "Bash(bash -n /Users/aakara/.mydotfiles/scripts/link.sh)"
+    ]
+  }
+}

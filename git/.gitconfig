@@ -1,0 +1,84 @@
+[user]
+    name  = Aakara
+    email = aakara.dev@gmail.com
+
+[core]
+    editor     = nvim
+    pager      = delta
+    excludesfile = ~/.gitignore_global
+    autocrlf   = input
+    whitespace = trailing-space,space-before-tab
+
+[init]
+    defaultBranch = main
+
+[pull]
+    rebase = true
+
+[push]
+    default        = current
+    autoSetupRemote = true
+
+[fetch]
+    prune = true
+
+[merge]
+    ff            = only
+    conflictstyle = zdiff3
+
+[rebase]
+    autosquash  = true
+    autostash   = true
+
+[diff]
+    algorithm   = histogram
+    colorMoved  = default
+
+[delta]
+    navigate        = true
+    light           = false
+    side-by-side    = true
+    line-numbers    = true
+    syntax-theme    = Dracula
+
+[interactive]
+    diffFilter = delta --color-only
+
+[alias]
+    # Short status
+    st   = status -sb
+    # Undo last commit (keep changes staged)
+    undo = reset --soft HEAD~1
+    # Amend without editing message
+    amend = commit --amend --no-edit
+    # List all aliases
+    aliases = config --get-regexp '^alias\\.'
+    # Show the last commit
+    last = log -1 HEAD --stat
+    # Pretty log
+    lg   = log --oneline --graph --decorate --all
+    # Show contributors
+    who  = shortlog -sn --no-merges
+    # Find a commit by message
+    find = log --all --oneline --grep
+    # What changed in the last N commits (default 1)
+    recap = diff HEAD~1 HEAD
+    # Stash with a message
+    ss   = stash save
+    # Show stash list pretty
+    sl   = stash list --pretty='%C(yellow)%gd%C(reset) %C(green)%s%C(reset)'
+
+[color]
+    ui = auto
+
+[credential]
+    helper = osxkeychain
+
+[url "git@github.com:"]
+    insteadOf = https://github.com/
+
+# Uncomment to sign all commits with GPG:
+# [commit]
+#     gpgsign = true
+# [gpg]
+#     program = gpg
